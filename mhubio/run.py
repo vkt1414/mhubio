@@ -551,7 +551,7 @@ if __name__ == '__main__':
     if args.stop_on_error and args.print:
         os.environ['MLOG_STOP_ON_ERROR'] = 'YES'
 
-    check if stdin is yaml file and if yes, load it as the config
+    #check if stdin is yaml file and if yes, load it as the config
     config_file = None
     if sys.stdin.isatty():
         try:
