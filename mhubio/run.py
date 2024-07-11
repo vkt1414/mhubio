@@ -552,23 +552,23 @@ if __name__ == '__main__':
         os.environ['MLOG_STOP_ON_ERROR'] = 'YES'
 
     # check if stdin is yaml file and if yes, load it as the config
-    config_file = None
-    if not sys.stdin.isatty():
-        try:
+    # config_file = None
+    # if not sys.stdin.isatty():
+    #     try:
                 
-            # read input file from stdin and print it then exit
-            stdin_config = yaml.safe_load(sys.stdin)
+    #         # read input file from stdin and print it then exit
+    #         stdin_config = yaml.safe_load(sys.stdin)
             
-            # save a temporary configfile
-            os.makedirs('/app/tmp', exist_ok=True)
-            with open('/app/tmp/stdin_config.yml', 'w') as file:
-                yaml.dump(stdin_config, file)
+    #         # save a temporary configfile
+    #         os.makedirs('/app/tmp', exist_ok=True)
+    #         with open('/app/tmp/stdin_config.yml', 'w') as file:
+    #             yaml.dump(stdin_config, file)
             
-            # overwrite config_file
-            config_file = '/app/tmp/stdin_config.yml'
+    #         # overwrite config_file
+    #         config_file = '/app/tmp/stdin_config.yml'
             
-        except:
-            pass
+    #     except:
+    #         pass
 
     # interactive mode?
     interactive = not args.non_interactive
